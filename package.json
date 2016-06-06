@@ -33,6 +33,7 @@
     "eslint-plugin-babel": "^3.2.0",
     "eslint-plugin-react": "^5.0.1",
     "express": "^4.13.4",
+    "jquery": "^2.2.4",
     "node-sass": "^3.7.0",
     "postcss-loader": "^0.9.1",
     "raven-js": "^2.3.0",

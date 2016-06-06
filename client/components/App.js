@@ -1,9 +1,23 @@
 import React from 'react';
 import Map from './Map';
-
-import {markers} from '../data/markers';
+import $ from 'jquery';
 
 const App = React.createClass({
+  getInitialState() {
+    return {
+      markers: []
+    }
+  },
+
+  componentDidMount() {
+    $.get('/twitter')
+    .then((markers) => {
+      this.setState({
+        markers
+      });
+    });
+  },
+
   render() {
     return (
       <div>
@@ -13,7 +27,7 @@ const App = React.createClass({
           </div>
         </header>
         <div className="map">
-          <Map markers={markers} />
+          <Map markers={this.state.markers} />
         </div>
       </div>
     )
