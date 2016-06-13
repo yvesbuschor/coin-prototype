@@ -21,6 +21,8 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.use(express.static(__dirname + '/'));
+
 app.get('/twitter', function(req, res) {
   var file = JSON.parse(fs.readFileSync('client/data/markers.json', 'utf8'));
   var result = [];
