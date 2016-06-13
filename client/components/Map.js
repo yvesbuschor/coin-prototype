@@ -18,7 +18,7 @@ export default function SimpleMap (props) {
         googleMapElement={
           <GoogleMap
             ref={(map) => console.log(map)}
-            defaultZoom={3}
+            defaultZoom={2}
             defaultCenter={{ lat: 46.891461, lng: 8.099526 }} // Rotbach
             onClick={props.onMapClick}
             defaultOptions={{
@@ -44,7 +44,7 @@ export default function SimpleMap (props) {
                 return (
                   <Marker
                     {...marker}
-                    onRightclick={() => props.onMarkerRightclick(index)} />
+                    key={marker.id}/>
                 );
               })}
             </MarkerClusterer>

@@ -4,9 +4,37 @@ header {
 }
 
 .map {
-  bottom: 0;
-  position: absolute;
-  top: 120px;
   width: 100%;
-  z-index: 0;
+  height: 600px;
+}
+
+.checkboxes label {
+  font-weight: normal;
+  margin-right: 15px;
+  input[type=checkbox] {
+    margin-right: 5px;
+  }
+}
+
+.barchart {
+  width: 100%;
+}
+
+.barelement {
+  div {
+    width: 50%;
+    display: inline-block;
+    span {
+      display: inline-block;
+      background: #009898;
+      height: 15px;
+    }
+  }
+  p {
+    width: 50%;
+    display: inline-block;
+    font-size: 11px;
+    text-align: right;
+    padding-right: 10px;
+  }
 }
